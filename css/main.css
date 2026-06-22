@@ -10,6 +10,11 @@
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(1, 8, 14, 1) 25%, rgba(80, 94, 255, 0.85) 50%, rgba(1, 8, 14, 1) 75%, rgba(0, 0, 0, 1) 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: #01080E;
+    background-image: 
+        radial-gradient(at 50% 0%, rgba(80, 94, 255, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 50%, rgba(0, 244, 191, 0.05) 0px, transparent 40%),
+        radial-gradient(at 0% 100%, rgba(24, 118, 232, 0.1) 0px, transparent 50%);
 
     display: flex;
     flex-direction: column;
@@ -57,10 +62,13 @@
 }
 
 .dashboard {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 
     border-radius: 2rem;
-    border-width: 1px;
+    border-width: 1px solid rgba(0, 244, 191, 0.35);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
     border-style: solid;
     border-color: #00F4BF;
 
@@ -80,12 +88,25 @@
     justify-content: flex-start;
 
     font-family: 'Inter', sans-serif;
+
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.dashboard__items__item:hover {
+    transform: translateY(-8px);
 }
 
 .dashboard__item__img {
     box-shadow: 0px 0px 24px 8px rgba(24, 118, 232, 0.25);
 
     margin-bottom: 1rem;
+    border-radius: 0.5rem;
+
+    transition: box-shadow 0.3s ease;
+}
+
+.dashboard__items__item:hover .dashboard__item__img {
+    box-shadow: 0px 0px 32px 8px rgba(24, 118, 232, 0.4);
 }
 
 .dashboard__item__img--rented {
@@ -101,7 +122,8 @@
     position: absolute;
     top: 0;
     
-    background-color: rgba(1, 8, 14, 0.4);
+    border-radius: 0.5rem;
+    background-color: rgba(1, 8, 14, 0.6);
 }
 
 .dashboard__item__name {
@@ -114,6 +136,7 @@
 .dashboard__item__button {
     display: flex;
     justify-content: center;
+    align-items: center;
 
     font-weight: 700;
     font-size: 1.5rem;
@@ -123,11 +146,30 @@
 
     border-radius: 1rem;
 
+    cursor: pointer;
+
     background-color: #1875E8;
+    color: #FFFFFF;
+    border: 1px solid transparent;
+
+    transition: all 0.3s ease;
+}
+
+.dashboard__item__button:hover {
+    background-color: #2b85f5;
+    box-shadow: 0px 0px 20px rgba(24, 117, 232, 0.6);
+    transform: scale(1.03);
 }
 
 .dashboard__item__button--return {
     background-color: #01080E;
+    border: 1px solid #1875E8;
+}
+
+.dashboard__item__button--return:hover {
+    background-color: #1875E8;
+    box-shadow: 0px 0px 20px rgba(24, 117, 232, 0.4);
+    transform: scale(1.03);
 }
 
 .hachuras {
