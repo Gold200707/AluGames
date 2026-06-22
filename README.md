@@ -1,5 +1,10 @@
 # 🎯 AluGames
 
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=%23323330)
+![Alura Challenge](https://img.shields.io/badge/Alura-Challenge-%23167BF7?style=for-the-badge)
+
 > 💡 **Nota de Escopo:** Este repositório **NÃO** é um sistema de produção comercial completo. Este projeto é estritamente um teste de estudo prático, desenvolvido com o objetivo de validar e consolidar conceitos cruciais de manipulação do DOM (Document Object Model) e a lógica de funções utilizando JavaScript Puro (Vanilla JS).
 
 ---
